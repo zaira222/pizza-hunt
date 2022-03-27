@@ -49,7 +49,6 @@ const handlePizzaSubmit = event => {
   if (!pizzaName || !createdBy || !toppings.length) {
     return;
   }
-
   const formData = { pizzaName, createdBy, size, toppings };
 
   fetch('/api/pizzas', {
@@ -68,8 +67,7 @@ const handlePizzaSubmit = event => {
   .catch(err => {
     console.log(err);
 });
-}
-
+};
 
 $pizzaForm.addEventListener('submit', handlePizzaSubmit);
 $addToppingBtn.addEventListener('click', handleAddTopping);
